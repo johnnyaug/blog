@@ -37,7 +37,7 @@ function post_range_block_info() {
  * @return
  *   A result set of the targeted posts.
  */
-function current_posts_contents(){
+function post_range_contents(){
   //Get today's date.
   $today = getdate();
   //Calculate the date a week ago.
@@ -59,10 +59,10 @@ function current_posts_contents(){
  *
  * Prepares the contents of the block.
  */
-function current_posts_block_view($delta = '') {
+function post_range_block_view($delta = '') {
   switch ($delta) {
-    case 'current_posts':
-      $block['subject'] = t('Current posts');
+    case 'post_range':
+      $block['subject'] = t('Hide Something...');
       if (user_access('access content')) {
         // Use our custom function to retrieve data.
         $result = current_posts_contents();
@@ -80,8 +80,7 @@ function current_posts_block_view($delta = '') {
         }
         else {
           // Pass data through theme function.
-          $block['content'] = theme('item_list', array(
-            'items' => $items));
+          $block['content'] = theme('item_list', array('items' => $items));
         }
       }
     return $block;
