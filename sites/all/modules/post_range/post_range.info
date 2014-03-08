@@ -1,0 +1,3 @@
+name = Post Range Maker
+description = Allows the user to interactively hide parts of posts.
+core = 7.x
