@@ -1,1 +1,18 @@
 <?php
+/**
+ * Implements hook_help.
+ *
+ * Displays help and module information.
+ *
+ * @param path
+ *   Which path of the site we're using to display help
+ * @param arg
+ *   Array that holds the current path as returned from arg() function
+ */
+function post_range_help($path, $arg) {
+  switch ($path) {
+    case "admin/help#post_range":
+      return '<p>' . t("Allows you to hide parts of posts.") . '</p>';
+      break;
+  }
+}
