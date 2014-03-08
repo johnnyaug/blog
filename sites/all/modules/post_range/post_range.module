@@ -12,6 +12,18 @@
 function post_range_help($path, $arg) {
   switch ($path) {
     case "admin/help#post_range":
-      return '<p>' . t("Allows you to hide parts of posts.") . '</p>';
+      return '<p>' . t("Allows you to hide parts of posts.") . '</p>';git pull
   }
+}
+/**
+ * Implements hook_block_info().
+ */
+function post_range_block_info() {
+  $blocks['post_range'] = array(
+    // The name that will appear in the block list.
+    'info' => ('Post Range'),
+    // Default setting.
+    'cache' => DRUPAL_CACHE_PER_ROLE,
+  );
+  return $blocks;
 }
