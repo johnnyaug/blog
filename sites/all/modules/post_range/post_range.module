@@ -65,7 +65,7 @@ function post_range_block_view($delta = '') {
       $block['subject'] = t('Hide Something...');
       if (user_access('access content')) {
         // Use our custom function to retrieve data.
-        $result = current_posts_contents();
+        $result = post_range_contents();
         // Array to contain items for the block to render.
         $items = array();
         // Iterate over the resultset and format as links.
