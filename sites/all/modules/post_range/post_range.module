@@ -37,7 +37,7 @@ function post_range_block_info() {
  * @return
  *   A result set of the targeted posts.
  */
-function post_range_contents(){
+function post_range_f$contents(){
   //Get today's date.
   $today = getdate();
   //Calculate the date a week ago.
@@ -59,7 +59,7 @@ function post_range_contents(){
  *
  * Prepares the contents of the block.
  */
-function post_range_block_view($delta = '') {
+function post_range_block_view1($delta = '') {
   switch ($delta) {
     case 'post_range':
       $block['subject'] = t('Hide Something...');
