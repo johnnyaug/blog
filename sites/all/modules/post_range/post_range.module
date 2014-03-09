@@ -37,7 +37,7 @@ function post_range_block_info() {
  * @return
  *   A result set of the targeted posts.
  */
-function post_range_f$contents(){
+function post_range_contents(){
   //Get today's date.
   $today = getdate();
   //Calculate the date a week ago.
