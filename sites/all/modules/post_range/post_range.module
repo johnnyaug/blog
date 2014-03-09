@@ -87,6 +87,7 @@ function post_range_block_view($delta = '') {
   }
 }
 ?>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript">
     (function($) {
         $(document).ready(function(){
